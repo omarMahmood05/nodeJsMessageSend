@@ -7,6 +7,9 @@ const PORT = 3000;
 
 const server = express();
 
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(express.static("public"));
+
 const transporter = nodemailer.createTransport({
   service: "hotmail",
   auth: {
