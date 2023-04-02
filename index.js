@@ -33,7 +33,7 @@ server.post("/", (req, res) => {
     from: "omarnodejs@outlook.com",
     to: "omarmahmood005@gmail.com",
     subject: `Recieved a message from your NodeJS Application`,
-    text: "You recieved a message from " + userName + ". The message is " \n + message,
+    text: "You recieved a message from " + userName + ". The message is " + message,
   };
 
   transporter.sendMail(options, (err, info) => {
